@@ -1,0 +1,15 @@
+//Recursion-1 > sumDigits
+public int sumDigits(int n) {
+  if(n == 0) return 0;
+  if(n < 0 && n < 10) return n;
+  else{
+    int rightDigit = n%10;
+    int leftDigit = n/10;
+    if (rightDigit == 0){
+      return sumDigits(leftDigit);
+    }
+    else{
+      return rightDigit + sumDigits(leftDigit);
+    }
+  }
+}

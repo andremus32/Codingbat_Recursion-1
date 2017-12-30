@@ -1,0 +1,12 @@
+//Recursion-1 > allStar
+public String allStar(String str) {
+  int len = str.length();
+  if(len == 0) return "";
+  else{
+    len--;
+    if(len != 0){
+      return allStar(str.substring(0, len)) + "*" + str.charAt(len);
+    }
+    else return String.valueOf(str.charAt(len));
+  }
+}

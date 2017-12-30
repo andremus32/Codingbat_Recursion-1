@@ -1,0 +1,12 @@
+//Recursion-1 > changeXY
+public String changeXY(String str) {
+  int len = str.length();
+  if(len == 0) return "";
+  else{
+    len--;
+    if(str.toLowerCase().charAt(len) == 'x'){
+      return changeXY(str.substring(0,len)) + "y";
+    }
+    else return changeXY(str.substring(0, len)) + str.toLowerCase().charAt(len);
+  }
+}

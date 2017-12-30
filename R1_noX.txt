@@ -1,0 +1,12 @@
+//Recursion-1 > noX
+public String noX(String str) {
+  int len = str.length();
+  if(len == 0) return "";
+  else{
+    len--;
+    if(str.toLowerCase().charAt(len) == 'x'){
+      return noX(str.substring(0, len));
+    }
+    else return noX(str.substring(0, len)) + str.substring(len);    
+ }
+}

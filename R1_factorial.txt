@@ -1,0 +1,17 @@
+//Recursion-1 > factorial 
+public int factorial(int n) {
+  int result = 1;
+  result = calc(result, n);
+  return result;
+}
+
+public int calc(int result, int n){
+  if (n == 1){
+    return result;
+  }
+  else {
+    n--;
+    result = result * calc(n+1, n);
+  }
+  return result;
+}

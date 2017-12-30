@@ -1,0 +1,18 @@
+//Recursion-1 > array220
+public boolean array220(int[] nums, int index) {
+  int len = nums.length;
+  if(len <= 1) return false;
+  else {
+    if(index < len-1){
+    if(nums[index]*10 == nums[index+1]){
+      index++;
+      return true;
+    }
+    else{
+      index++;
+      return array220(nums, index);
+    }
+    }
+    else return false;
+  }
+}

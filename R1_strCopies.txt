@@ -1,0 +1,14 @@
+//Recursion-1 > strCopies
+public boolean strCopies(String str, String sub, int n) {
+  int strLen = str.length();
+  int subLen = sub.length();
+  
+  if(n == 0) return true;
+  if(strLen < subLen) return false;
+  else{
+    if(str.substring(0, subLen).equals(sub)){
+      return strCopies(str.substring(1), sub, n-1);
+    }
+    else return strCopies(str.substring(1), sub, n);
+  }
+}

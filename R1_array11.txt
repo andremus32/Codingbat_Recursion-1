@@ -1,0 +1,18 @@
+//Recursion-1 > array11
+public int array11(int[] nums, int index) {
+  int len = nums.length;
+  if (len == 0) return 0;
+  else{
+    if(index < len){
+      if(nums[index] == 11){
+        index++;
+        return 1 + array11(nums, index);
+      }
+      else {
+        index++;
+        return array11(nums, index);
+      }
+    }
+    else return 0;
+  }
+}

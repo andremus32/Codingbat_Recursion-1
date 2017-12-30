@@ -1,0 +1,9 @@
+//Recursion-1 > powerN
+public int powerN(int base, int n) {
+  if(n == 1) return base;
+  else if(n > 1){
+    n--;
+    return base * powerN(base, n);
+  }
+  else return powerN(base, n);
+}

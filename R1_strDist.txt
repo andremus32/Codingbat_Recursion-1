@@ -1,0 +1,18 @@
+//Recursion-1 > strDist
+public int strDist(String str, String sub) {
+  int strLen = str.length();
+  int subLen = sub.length();
+  
+  if(strLen == 0) return 0;
+  if(strLen < subLen) return 0;
+  else {
+    if(str.substring(0, subLen).equals(sub) && str.substring(strLen-subLen).equals(sub)){
+      return strLen;
+    }
+    else if(str.substring(0, subLen).equals(sub) && !str.substring(strLen-subLen).equals(sub)){
+      return strDist(str.substring(0, strLen-1), sub);
+    }
+    
+    else return strDist(str.substring(1), sub);
+  }
+}

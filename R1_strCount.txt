@@ -1,0 +1,12 @@
+//Recursion-1 > strCount
+public int strCount(String str, String sub) {
+  int subLen = sub.length();
+  int strLen = str.length();
+  if(strLen < subLen) return 0;
+  else{
+    if(str.substring(0,subLen).equals(sub)){
+      return 1 + strCount(str.substring(subLen), sub);
+    }
+    else return strCount(str.substring(1), sub);
+  }
+}

@@ -1,0 +1,12 @@
+//Recursion-1 > countX
+public int countX(String str) {
+  int len = str.length();
+  if (len == 0) return 0;
+  else{
+    len--;
+    if(str.toLowerCase().charAt(len) == 'x'){
+      return 1 + countX(str.substring(0, len));
+    }
+    else return countX(str.substring(0, len));
+  }
+}

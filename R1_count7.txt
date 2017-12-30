@@ -1,0 +1,16 @@
+//Recursion-1 > count7
+public int count7(int n) {
+  if(n == 0) return 0;
+  if(n < 0 && n < 10) return n;
+  else{
+    int rightDigit = n%10;
+    int leftDigit = n/10;
+    if (rightDigit == 0){
+      return count7(leftDigit);
+    }
+    else if(rightDigit == 7){
+      return 1 + count7(leftDigit);
+    }
+    else return count7(leftDigit);
+  }
+}

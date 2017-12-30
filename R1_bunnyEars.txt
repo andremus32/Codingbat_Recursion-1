@@ -1,0 +1,17 @@
+//Recursion-1 > bunnyEars
+public int bunnyEars(int bunnies) {
+  int result = 0;
+  result = findEars(result, bunnies);
+  return result;
+}
+
+public int findEars(int result, int bunnies){
+  if(bunnies == 0){
+    return result;
+  }
+  else {
+    bunnies--;
+    result += 2 + findEars(result, bunnies); 
+  }
+  return result;
+}
